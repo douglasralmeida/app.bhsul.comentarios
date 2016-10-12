@@ -1,0 +1,13 @@
+{
+  "name": "BHSul_ComentariosApp",
+  "version": "1.0.0",
+  "description": "Manipulador do Feedback do Portal da BH Sul",
+  "author": "Douglas R.Almeida <douglasralmeida@live.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}

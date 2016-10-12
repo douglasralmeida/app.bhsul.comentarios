@@ -1,0 +1,20 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker build -t douglasralmeida/app.bhsul.comentarios .
+
+test: 
+  override: 
+    - docker run -d -p 8080:8080 douglasralmeida/app.bhsul.comentarios; sleep 10
+    - curl --retry 10 --retry-delay 5 http://127.0.0.1:8080/
+
+deployment:
+  hub:
+    branch: master
+    commands:
+      - docker login -e douglasralmeida@live.com -u douglasralmeida -p $DOCKER_PASS
+      - docker push douglasralmeida/app.bhsul.comentarios
