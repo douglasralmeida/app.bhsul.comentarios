@@ -13,7 +13,7 @@ COPY package.json /usr/src/app/
 RUN npm install
 
 # Enviar a aplicação para o container
-COPY . /usr/src/app
+COPY dist /usr/src/app
 
 # Porta
 EXPOSE 8080
