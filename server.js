@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
   res.send('app.bhsul.comentarios esta vivo!\n');
 });
 
-app.post('/',  express.bodyParser(), function(req, res){
+app.post('/', function(req, res){
     console.log('POST /');
     console.dir(req.body);
 });
