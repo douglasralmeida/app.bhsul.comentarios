@@ -14,6 +14,7 @@ RUN npm install
 
 # Enviar a aplicação para o container
 COPY server.js /usr/src/app
+COPY routes /usr/src/app
 
 # Porta
 EXPOSE 8080

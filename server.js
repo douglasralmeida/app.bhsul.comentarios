@@ -1,7 +1,7 @@
 'use strict';
 
 var express = require('express');
-var feedback = require('routes/feedback');
+var feedback = require('./routes/feedback');
 
 // Constantes
 var PORT = 8080;
