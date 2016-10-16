@@ -13,7 +13,7 @@ var app = express();
 
 // Implementa Cross-Origin Resource Sharing 
 //app.use(cors());
-app.options('*', cors());
+app.options('/', cors());
 
 app.get('/teste', function (req, res) {
   res.send('app.bhsul.comentarios esta vivo!\n');
@@ -22,6 +22,10 @@ app.get('/teste', function (req, res) {
 app.get('/', feedback.exibirtudo);
 
 app.get('/:id', feedback.exibir);
+
+app.head('/', cors(), function(req, res){
+  res.send(204);
+});
 
 app.post('/', cors(), feedback.adicionar);
 
