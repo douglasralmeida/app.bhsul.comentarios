@@ -21,7 +21,7 @@ var corsOptionsDelegate = function(req, callback){
 
 // Implementa Cross-Origin Resource Sharing 
 //app.use(cors());
-app.options('/', cors());
+app.options('/', cors(corsOptionsDelegate));
 
 app.get('/teste', function (req, res) {
   res.send('app.bhsul.comentarios esta vivo!\n');
