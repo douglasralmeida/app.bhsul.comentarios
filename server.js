@@ -11,7 +11,9 @@ var HOST = '127.0.0.1';
 // App
 var app = express();
 
-app.use(cors());
+// Implementa Cross-Origin Resource Sharing 
+//app.use(cors());
+app.options('*', cors());
 
 app.get('/teste', function (req, res) {
   res.send('app.bhsul.comentarios esta vivo!\n');
@@ -21,7 +23,7 @@ app.get('/', feedback.exibirtudo);
 
 app.get('/:id', feedback.exibir);
 
-app.post('/', feedback.adicionar);
+app.post('/', cors(), feedback.adicionar);
 
 app.put('/:id', feedback.editar);
 
