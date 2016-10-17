@@ -1,5 +1,10 @@
+var db = require('./routes/db');
+
 exports.adicionar = function(req, res) {
-    var feedback = req.body;
+    var novofeedback = req.body;
+	var sql = 'INSERT INTO feedback VALUES ;';
+	
+	
 	res.send('ok');
 }
 
@@ -15,7 +20,7 @@ exports.excluir = function(req, res) {
 }
 
 exports.exibirtudo = function(req, res) {
-    res.send([{descricao:'comentário 1'}, {descricao:'comentário 2'}, {descricao:'comentário 3'}]);
+    res.send({"feedbacks": [{"id": "001","tipo": 1,"descricao": "Um teste"}, {"id": "002","tipo": 2,"descricao": "Outro teste"}]});
 };
 
 exports.exibir = function(req, res) {

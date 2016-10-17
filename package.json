@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "express": "^4.13.3",
-	"cors": "^2.8.0"
+	"cors": "^2.8.0",
+	"mysql": "^2.11.1"
   }
 }
