@@ -1,12 +1,12 @@
 var mysql      = require('mysql');
 
-var sqlpool   =    mysql.createPool({
-    connectionLimit : 100, //important
-    host     : 'localhost',
-    user     : 'usuario_simples',
+var sqlpool = mysql.createPool({
+    connectionLimit : 100,
+    host     : 'localhost',
+    user     : 'usuario_simples',
     password : process.env.SQL_PASSWORD,
     database : 'bhsul.gestaosite',
-    debug    :  false
+    debug    :  false
 });
 
 function exports.handle_database(sql, resultado) {
