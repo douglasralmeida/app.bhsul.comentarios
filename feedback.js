@@ -1,4 +1,4 @@
-var db = require('/db/db');
+var db = require('./db');
 
 exports.adicionar = function(req, res) {
     var novofeedback = req.body;

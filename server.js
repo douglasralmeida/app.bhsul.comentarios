@@ -2,7 +2,7 @@
 
 var express = require('express');
 var cors = require('cors');
-var feedback = require('./routes/feedback');
+var feedback = require('./feedback');
 
 // Constantes
 var PORT = 8080;

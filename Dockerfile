@@ -16,8 +16,8 @@ WORKDIR /usr/src/app
 
 # Enviar a aplicação para o container
 COPY server.js /usr/src/app
-COPY routes /usr/src/app/routes
-COPY db /usr/src/app/db
+COPY feedback.js /usr/src/app
+COPY db.js /usr/src/app
 
 # Instalar as dependências da aplicação
 COPY package.json /usr/src/app/
