@@ -8,7 +8,7 @@ var sqlpool = mysql.createPool({
  database : 'bhsul.gestaosite',
  debug : false
 });
-
+/*
 function exports.handle_database(sql, resultado) {
     pool.getConnection(function(err,connection) {
 		if (err) {
@@ -32,4 +32,4 @@ function exports.handle_database(sql, resultado) {
 
 exports.consultar = function(res) {
 	
-}
+}*/
