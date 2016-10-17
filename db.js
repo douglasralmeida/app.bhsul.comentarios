@@ -1,4 +1,4 @@
-var mysql      = require('mysql');
+var mysql      = require('mysql');
 
 var sqlpool   =    mysql.createPool({
     connectionLimit : 100, //important
@@ -28,4 +28,8 @@ function exports.handle_database(sql, resultado) {
             return;
         });
     });
+}
+
+exports.consultar = function(res) {
+	
 }
