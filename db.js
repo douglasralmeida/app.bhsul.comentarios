@@ -9,7 +9,7 @@ var sqlpool   =    mysql.createPool({
     debug    :  false
 });
 
-function handle_database(sql, resultado) {
+function exports.handle_database(sql, resultado) {
     pool.getConnection(function(err,connection) {
         if (err) {
             console.log('Erro ao conectar ao banco de dados');
