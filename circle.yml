@@ -1,23 +1,26 @@
 machine:
   services:
     - docker
+    - node:
+      version: 4.6.0
+
+database:
+  pre:
+    - 
+    - 
 
 dependencies:
   override:
-    - docker info
-    - docker build -t douglasralmeida/app.bhsul.comentarios .
+    - npm install
 
 test: 
-  override: 
-    - docker run -d --name feedback-app -e "NODE_ENV=production" -p 80:8080 douglasralmeida/app.bhsul.comentarios; sleep 10
-    - docker logs feedback-app
-    - curl -i --retry 10 --retry-delay 5 http://127.0.0.1/teste
-    - |
-       curl -i --retry 10 --retry-delay 5 -X POST -H 'Content-Type: application/json' -d '{"tipo":"problema","detalhes":"Teste padrao"}' http://127.0.0.1/
+  override:
+    - npm test
 
 deployment:
   hub:
     branch: master
     commands:
+      - docker build -t douglasralmeida/app.bhsul.comentarios .
       - docker login -e douglasralmeida@live.com -u douglasralmeida -p $DOCKER_PASS
       - docker push douglasralmeida/app.bhsul.comentarios
