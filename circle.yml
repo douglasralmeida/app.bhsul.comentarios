@@ -6,6 +6,7 @@ machine:
 database:
   pre:
     - mysql -u ubuntu -e "CREATE USER 'test';"
+    - MUSQL -u ubuntu -e "GRANT ALL ON bhsul_gestaosite.* TO 'test';"
     - mysql -u test < test/db.sql
 
 dependencies:
