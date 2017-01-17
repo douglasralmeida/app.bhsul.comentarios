@@ -6,7 +6,7 @@ machine:
 database:
   pre:
     - mysql -u ubuntu -e "create user 'test'@'localhost';"
-    - mysql -u ubuntu < test/db.sql
+    - mysql -u test < test/db.sql
 
 dependencies:
   override:
