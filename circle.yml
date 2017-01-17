@@ -5,7 +5,7 @@ machine:
 
 database:
   pre:
-    - mysql -u ubuntu -e "create user 'test'@'localhost';"
+    - mysql -u ubuntu -e "create user 'test'@'%';"
     - mysql -u test < test/db.sql
 
 dependencies:
