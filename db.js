@@ -3,7 +3,7 @@ var mysql = require('mysql');
 var sqlpool = mysql.createPool({
  connectionLimit : 100,
  host : 'localhost',
- user : 'usuario_simples',
+ user : 'simples',
  password : process.env.SQL_PASSWORD,
  database : 'bhsul.gestaosite',
  debug : false
