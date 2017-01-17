@@ -5,7 +5,7 @@ machine:
 
 database:
   pre:
-    - mysql -u ubuntu -e "create database bhsul_gestaosite"
+    - createdb bhsul_gestaosite
     - mysql -u ubuntu bhsul_gestaosite < test/db.sql
 
 dependencies:
