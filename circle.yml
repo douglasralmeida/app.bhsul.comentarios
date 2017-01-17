@@ -6,7 +6,7 @@ machine:
 database:
   pre:
     - createdb bhsul_gestaosite
-    - mysql -u ubuntu bhsul_gestaosite < test/db.sql
+    - mysql -u ubuntu < test/db.sql
 
 dependencies:
   override:
