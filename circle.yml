@@ -5,9 +5,8 @@ machine:
 
 database:
   pre:
-    - mysql -u ubuntu -e "CREATE USER 'test'@'%';"
-    - mysql -u ubuntu -e "GRANT ALL ON bhsul_gestaosite.* TO 'test'@'%';"
-    - mysql -u test < test/db.sql
+    - mysql -u ubuntu -e "create database bhsul_gestaosite"
+    - mysql -u ubuntu bhsul_gestaosite < test/db.sql
 
 dependencies:
   override:
