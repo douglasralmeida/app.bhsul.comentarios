@@ -1,4 +1,4 @@
-CREATE DATABASE bhsul_gestaosite;
+CREATE DATABASE IF NOT EXISTS bhsul_gestaosite;
 
 GRANT DELETE, SELECT, INSERT, UPDATE ON bhsul_gestaosite.* TO 'usuario_simples'@'%';
 
