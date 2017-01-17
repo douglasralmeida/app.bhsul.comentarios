@@ -6,6 +6,7 @@ machine:
 database:
   pre:
     - createdb bhsul_gestaosite
+    - mysql -u ubuntu "CREATE USER 'usuario_simples'@'%' IDENTIFIED WITH mysql_native_password BY '$SQL_PASSWORD'";
     - mysql -u ubuntu < test/db.sql
 
 dependencies:
