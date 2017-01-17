@@ -6,8 +6,7 @@ machine:
 
 database:
   pre:
-    - 
-    - 
+    - mysql -u ubuntu circle_test < test/db.sql
 
 dependencies:
   override:
