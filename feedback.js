@@ -20,14 +20,16 @@ exports.excluir = function(req, res) {
 }
 
 exports.exibirtudo = function(req, res) {
-	var feedbacks = new Array();
+	var feedbacks = [];
 	feedbacks[0].id = 1;
     feedbacks[0].tipo = 1;
     feedbacks[0].descricao = "Um teste";
 	feedbacks[1].id = 2;
     feedbacks[1].tipo = 2;
     feedbacks[1].descricao = "Outro teste";
-    res.send(feedbacks);
+    
+    res.contentType('application/json');
+    res.send(JSON.stringify(feedbacks));
 };
 
 exports.exibir = function(req, res) {
