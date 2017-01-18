@@ -15,6 +15,7 @@
   },
   "devDependencies": {
   "chai": "*",
+  "chai-http": "*",
   "mocha": "*"
   }
 }
