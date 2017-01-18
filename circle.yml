@@ -4,7 +4,7 @@ machine:
     - docker
 
 database:
-  pre:
+  override:
     - createdb bhsul_gestaosite
     - mysql -u ubuntu "CREATE USER 'simples'@'%' IDENTIFIED WITH mysql_native_password BY '$SQL_PASSWORD'";
     - mysql -u ubuntu < test/db.sql
