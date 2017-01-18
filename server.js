@@ -43,3 +43,4 @@ app.delete('/:id', feedback.excluir);
 
 app.listen(PORT);
 console.log('Executando em http://localhost:'  + PORT);
+module.exports = app;
