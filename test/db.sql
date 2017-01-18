@@ -1,7 +1,5 @@
 CREATE DATABASE IF NOT EXISTS bhsul_gestaosite;
 
-GRANT DELETE, SELECT, INSERT, UPDATE ON bhsul_gestaosite.* TO 'simples'@'%';
-
 CREATE TABLE bhsul_gestaosite.feedback (
   feedbackid INT UNSIGNED NOT NULL AUTO_INCREMENT,
   tipo INT(1) UNSIGNED NOT NULL,
