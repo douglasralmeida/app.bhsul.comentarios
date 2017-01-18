@@ -5,9 +5,8 @@ machine:
 
 database:
   override:
-    - createdb bhsul_gestaosite
-    - mysql -u ubuntu "CREATE USER 'simples'@'%' IDENTIFIED WITH mysql_native_password BY '$SQL_PASSWORD'";
-    - mysql -u ubuntu < test/db.sql
+    - cp config/database.yml.ci config/database.yml
+    - bundle exec rake db:create db:migrate db:seed permissions:permissions --trace
 
 dependencies:
   override:
