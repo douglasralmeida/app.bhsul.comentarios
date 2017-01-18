@@ -20,7 +20,7 @@ exports.excluir = function(req, res) {
 }
 
 exports.exibirtudo = function(req, res) {
-    res.send({"feedbacks": [{"id": "001","tipo": 1,"descricao": "Um teste"}, {"id": "002","tipo": 2,"descricao": "Outro teste"}]});
+    res.send({"feedbacks": [{"id": "1","tipo": 1,"descricao": "Um teste"}, {"id": "2","tipo": 2,"descricao": "Outro teste"}]});
 };
 
 exports.exibir = function(req, res) {
