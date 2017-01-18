@@ -12,7 +12,7 @@ dependencies:
   override:
     - npm install
 
-test: 
+test:
   override:
     - npm test
 

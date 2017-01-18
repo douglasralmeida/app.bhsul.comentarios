@@ -5,11 +5,16 @@
   "author": "Douglas R.Almeida <douglasralmeida@live.com>",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "node test/test.js"
   },
   "dependencies": {
     "express": "^4.13.3",
 	"cors": "^2.8.0",
 	"mysql": "^2.11.1"
-  }
+  },
+  "devDependencies": {
+  "chai": "*",
+  "mocha": "*"
+},
 }
