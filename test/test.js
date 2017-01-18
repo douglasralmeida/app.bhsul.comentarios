@@ -1,13 +1,13 @@
 var chai = require('chai');
 var chaiHttp = require('chai-http');
-var server = require('../server');
+var app = require('../server');
 var should = chai.should();
 
 chai.use(chaiHttp);
 
 describe('Teste', function() {
   it('Teste basico', function(done) {
-    chai.request(server)
+    chai.request(app.app)
       .get('/teste')
       .end(function(err, res){
         res.should.have.status(200);
