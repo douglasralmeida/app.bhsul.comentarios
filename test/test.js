@@ -7,7 +7,7 @@ chai.use(chaiHttp);
 
 describe('Teste', function() {
   it('Teste basico', function(done) {
-    chai.request(app.app)
+    chai.request(app)
       .get('/teste')
       .end(function(err, res){
         res.should.have.status(200);
