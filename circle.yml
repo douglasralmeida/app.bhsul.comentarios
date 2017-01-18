@@ -5,7 +5,7 @@ machine:
 
 database:
   override:
-    - cp config/database.yml.ci config/database.ymL
+    - cp config/database.yml.ci config/database.yml
     - mysql -u ubuntu < test/db.sql
 
 dependencies:
