@@ -1,0 +1,6 @@
+ test:
+   adapter: mysql
+   database: bhsul_gestaosite
+   pool: 5
+   username: simples
+   password: $SQL_PASSWORD
