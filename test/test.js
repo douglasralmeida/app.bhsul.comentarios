@@ -16,7 +16,7 @@ describe('Teste', function() {
   });
   it('Obtendo todos os objetos de dados', function(done) {
     chai.request(server)
-      .get('/blobs')
+      .get('/')
       .end(function(err, res){
         res.should.have.status(200);
         res.should.be.json;
