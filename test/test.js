@@ -14,6 +14,17 @@ describe('Teste', function() {
         done();
       });
   });
+  it('Obtendo todos os objetos de dados', function(done) {
+    chai.request(server)
+      .get('/blobs')
+      .end(function(err, res){
+        res.should.have.status(200);
+        res.should.be.json;
+        res.body.should.be.a('array');
+        done();
+      });
+  });
+
 
 //  it('should list a SINGLE blob on /blob/<id> GET');
 //  it('should add a SINGLE blob on /blobs POST');
