@@ -15,7 +15,7 @@ describe('Teste', function() {
       });
   });
   it('Obtendo todos os objetos de dados', function(done) {
-    chai.request(server)
+    chai.request(app)
       .get('/')
       .end(function(err, res){
         res.should.have.status(200);
