@@ -27,23 +27,18 @@ app.get('/teste', function (req, res) {
   res.send('app.bhsul.comentarios esta vivo!\n');
 });
 
-//Exibir lista de itens
 app.get('/', feedback.exibirtudo);
 
-//Exibir um item especifico
 app.get('/:id', feedback.exibir);
 
 app.head('/', cors(corsOptionsDelegate), function(req, res){
   res.send(204);
 });
 
-//Adicionar um item
 app.post('/', cors(), feedback.adicionar);
 
-//Alterar um item especifico
 app.put('/:id', feedback.editar);
 
-//Excluir um item
 app.delete('/:id', feedback.excluir);
 
 app.listen(PORT);
